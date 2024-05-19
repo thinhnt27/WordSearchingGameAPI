@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WordSearchingGameAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9ae7181fa125375ff3996e8c3fbbdf0b81d93832")]
 [assembly: System.Reflection.AssemblyProductAttribute("WordSearchingGameAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WordSearchingGameAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
