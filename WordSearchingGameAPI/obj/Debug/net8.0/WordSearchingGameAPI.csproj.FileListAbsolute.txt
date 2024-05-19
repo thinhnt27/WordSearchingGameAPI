@@ -1,0 +1,7 @@
+D:\Thinh\Term7\PRU212\WordSearchingGameAPI\WordSearchingGameAPI\obj\Debug\net8.0\WordSearchingGameAPI.csproj.AssemblyReference.cache
+D:\Thinh\Term7\PRU212\WordSearchingGameAPI\WordSearchingGameAPI\obj\Debug\net8.0\WordSearchingGameAPI.GeneratedMSBuildEditorConfig.editorconfig
+D:\Thinh\Term7\PRU212\WordSearchingGameAPI\WordSearchingGameAPI\obj\Debug\net8.0\WordSearchingGameAPI.AssemblyInfoInputs.cache
+D:\Thinh\Term7\PRU212\WordSearchingGameAPI\WordSearchingGameAPI\obj\Debug\net8.0\WordSearchingGameAPI.AssemblyInfo.cs
+D:\Thinh\Term7\PRU212\WordSearchingGameAPI\WordSearchingGameAPI\obj\Debug\net8.0\WordSearchingGameAPI.csproj.CoreCompileInputs.cache
+D:\Thinh\Term7\PRU212\WordSearchingGameAPI\WordSearchingGameAPI\obj\Debug\net8.0\WordSearchingGameAPI.MvcApplicationPartsAssemblyInfo.cs
+D:\Thinh\Term7\PRU212\WordSearchingGameAPI\WordSearchingGameAPI\obj\Debug\net8.0\WordSearchingGameAPI.MvcApplicationPartsAssemblyInfo.cache

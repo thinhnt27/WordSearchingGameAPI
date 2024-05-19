@@ -1,0 +1,6 @@
+@WordSearchingGameAPI_HostAddress = http://localhost:5169
+
+GET {{WordSearchingGameAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
