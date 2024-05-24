@@ -13,7 +13,5 @@ public partial class Topic
 
     public virtual ICollection<Level> Levels { get; set; } = new List<Level>();
 
-    public virtual ICollection<UserProgress> UserProgresses { get; set; } = new List<UserProgress>();
-
     public virtual ICollection<Word> Words { get; set; } = new List<Word>();
 }

@@ -7,10 +7,12 @@ namespace WordSearchingGameAPI.Repository
     public class GenericRepository<T> : IGenericRepository<T> where T : class
     {
         protected readonly WordSearchingGameContext _context;
+        protected readonly DbSet<T> _dbSet;
 
         public GenericRepository(WordSearchingGameContext context)
         {
             _context = context;
+            _dbSet = _context.Set<T>();
         }
 
         public void Add(T entity)

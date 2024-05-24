@@ -29,7 +29,7 @@ public partial class WordSearchingGameContext : DbContext
     {
         modelBuilder.Entity<Difficulty>(entity =>
         {
-            entity.HasKey(e => e.DifficultyId).HasName("PK__Difficul__161A32071E1AD4CB");
+            entity.HasKey(e => e.DifficultyId).HasName("PK__Difficul__161A32071A8BFBBD");
 
             entity.Property(e => e.DifficultyId).HasColumnName("DifficultyID");
             entity.Property(e => e.DifficultyLevel)
@@ -39,7 +39,7 @@ public partial class WordSearchingGameContext : DbContext
 
         modelBuilder.Entity<Level>(entity =>
         {
-            entity.HasKey(e => e.LevelId).HasName("PK__Levels__09F03C069828B69D");
+            entity.HasKey(e => e.LevelId).HasName("PK__Levels__09F03C0674FE7E83");
 
             entity.Property(e => e.LevelId).HasColumnName("LevelID");
             entity.Property(e => e.DifficultyId).HasColumnName("DifficultyID");
@@ -56,7 +56,7 @@ public partial class WordSearchingGameContext : DbContext
 
         modelBuilder.Entity<Topic>(entity =>
         {
-            entity.HasKey(e => e.TopicId).HasName("PK__Topics__022E0F7D46191246");
+            entity.HasKey(e => e.TopicId).HasName("PK__Topics__022E0F7DB8198B8A");
 
             entity.Property(e => e.TopicId).HasColumnName("TopicID");
             entity.Property(e => e.TopicName)
@@ -66,11 +66,11 @@ public partial class WordSearchingGameContext : DbContext
 
         modelBuilder.Entity<User>(entity =>
         {
-            entity.HasKey(e => e.UserId).HasName("PK__Users__1788CCAC158F5798");
+            entity.HasKey(e => e.UserId).HasName("PK__Users__1788CCACD019CB30");
 
-            entity.HasIndex(e => e.Username, "UQ__Users__536C85E4483C8558").IsUnique();
+            entity.HasIndex(e => e.Username, "UQ__Users__536C85E4EC264814").IsUnique();
 
-            entity.HasIndex(e => e.Email, "UQ__Users__A9D10534D6A730F1").IsUnique();
+            entity.HasIndex(e => e.Email, "UQ__Users__A9D10534364F1BA6").IsUnique();
 
             entity.Property(e => e.UserId).HasColumnName("UserID");
             entity.Property(e => e.DateJoined)
@@ -89,29 +89,19 @@ public partial class WordSearchingGameContext : DbContext
 
         modelBuilder.Entity<UserProgress>(entity =>
         {
-            entity.HasKey(e => e.ProgressId).HasName("PK__UserProg__BAE29C85DF4E189C");
+            entity.HasKey(e => e.ProgressId).HasName("PK__UserProg__BAE29C8551A1DE93");
 
             entity.ToTable("UserProgress");
 
             entity.Property(e => e.ProgressId).HasColumnName("ProgressID");
             entity.Property(e => e.Completed).HasDefaultValue(false);
             entity.Property(e => e.CompletionTime).HasColumnType("datetime");
-            entity.Property(e => e.DifficultyId).HasColumnName("DifficultyID");
             entity.Property(e => e.LevelId).HasColumnName("LevelID");
-            entity.Property(e => e.TopicId).HasColumnName("TopicID");
             entity.Property(e => e.UserId).HasColumnName("UserID");
-
-            entity.HasOne(d => d.Difficulty).WithMany(p => p.UserProgresses)
-                .HasForeignKey(d => d.DifficultyId)
-                .HasConstraintName("FK__UserProgr__Diffi__4AB81AF0");
 
             entity.HasOne(d => d.Level).WithMany(p => p.UserProgresses)
                 .HasForeignKey(d => d.LevelId)
-                .HasConstraintName("FK__UserProgr__Level__4BAC3F29");
-
-            entity.HasOne(d => d.Topic).WithMany(p => p.UserProgresses)
-                .HasForeignKey(d => d.TopicId)
-                .HasConstraintName("FK__UserProgr__Topic__49C3F6B7");
+                .HasConstraintName("FK__UserProgr__Level__49C3F6B7");
 
             entity.HasOne(d => d.User).WithMany(p => p.UserProgresses)
                 .HasForeignKey(d => d.UserId)
@@ -120,7 +110,7 @@ public partial class WordSearchingGameContext : DbContext
 
         modelBuilder.Entity<Word>(entity =>
         {
-            entity.HasKey(e => e.WordId).HasName("PK__Words__2C20F0469C3B8C7F");
+            entity.HasKey(e => e.WordId).HasName("PK__Words__2C20F0469B6992E0");
 
             entity.Property(e => e.WordId).HasColumnName("WordID");
             entity.Property(e => e.DifficultyId).HasColumnName("DifficultyID");

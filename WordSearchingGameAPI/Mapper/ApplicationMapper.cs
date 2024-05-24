@@ -9,7 +9,9 @@ namespace WordSearchingGameAPI.Mapper
         public ApplicationMapper() 
         {
 //            CreateMap<Materials, MaterialsModel>().ReverseMap();
-              CreateMap<User, UserDTO>().ReverseMap();
+            CreateMap<User, UserDTO>().ReverseMap();
+            CreateMap<Difficulty, DifficultyDTO>().ReverseMap();
+            CreateMap<UserProgress, UserProgressDTO>().ReverseMap();
 
         }
     }

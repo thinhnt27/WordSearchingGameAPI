@@ -11,21 +11,13 @@ public partial class UserProgress
 
     public int? UserId { get; set; }
 
-    public int? TopicId { get; set; }
-
-    public int? DifficultyId { get; set; }
-
     public int? LevelId { get; set; }
 
     public bool? Completed { get; set; }
 
     public DateTime? CompletionTime { get; set; }
 
-    public virtual Difficulty Difficulty { get; set; }
-
     public virtual Level Level { get; set; }
-
-    public virtual Topic Topic { get; set; }
 
     public virtual User User { get; set; }
 }

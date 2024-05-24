@@ -1,6 +1,11 @@
-﻿namespace WordSearchingGameAPI.Repository
+﻿using WordSearchingGameAPI.Models;
+
+namespace WordSearchingGameAPI.Repository
 {
-    public class DifficultyRepository
+    public class DifficultyRepository : GenericRepository<Difficulty>
     {
+        public DifficultyRepository(WordSearchingGameContext context) : base(context)
+        {
+        }
     }
 }
