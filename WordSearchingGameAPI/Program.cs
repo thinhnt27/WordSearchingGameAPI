@@ -10,6 +10,10 @@ using WordSearchingGameAPI.Settings;
 using WordSearchingGameAPI.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
+using WordSearchingGameAPI.Repository;
+using WordSearchingGameAPI.UnitOfWorks;
+using WordSearchingGameAPI.Service;
+using WordSearchingGameAPI.Data;
 
 namespace WordSearchingGameAPI
 {
@@ -42,23 +46,23 @@ namespace WordSearchingGameAPI
             });
             builder.Services.AddAuthorization();
 
-            builder.Services.AddAuthentication(options =>
-            {
-                options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
-                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-            })
-                .AddJwtBearer(options =>
-                {
-                    options.TokenValidationParameters = new TokenValidationParameters()
-                    {
-                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSettings.Key)),
-                        ValidateIssuer = false,
-                        ValidateAudience = false,
-                        ValidateLifetime = true,
-                        ValidateIssuerSigningKey = true
-                    };
-                });
+            //builder.Services.AddAuthentication(options =>
+            //{
+            //    options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+            //    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            //    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+            //})
+            //    .AddJwtBearer(options =>
+            //    {
+            //        options.TokenValidationParameters = new TokenValidationParameters()
+            //        {
+            //            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSettings.Key)),
+            //            ValidateIssuer = false,
+            //            ValidateAudience = false,
+            //            ValidateLifetime = true,
+            //            ValidateIssuerSigningKey = true
+            //        };
+            //    });
 
             builder.Services.AddDbContext<WordSearchingGameContext>(opt =>
             {
@@ -97,7 +101,30 @@ namespace WordSearchingGameAPI
                 option.AddPolicy("CORS", builder =>
                     builder.AllowAnyMethod().AllowAnyHeader().AllowCredentials().SetIsOriginAllowed((host) => true)));
 
+            builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+            builder.Services.AddScoped<DatabaseInitialiser>();
+            builder.Services.AddScoped<UserRepository>();
+            builder.Services.AddScoped<WordRepository>();
+            builder.Services.AddScoped<DifficultyRepository>();
+            builder.Services.AddScoped<LevelRepository>();
+            builder.Services.AddScoped<UserProgressRepository>();
+            builder.Services.AddScoped<TopicRepository>();
+            builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+            builder.Services.AddScoped<UserService>();
+            builder.Services.AddScoped<WordService>();
+            builder.Services.AddScoped<DifficultyService>();
+            builder.Services.AddScoped<LevelService>();
+            builder.Services.AddScoped<UserProgressService>();
+            builder.Services.AddScoped<TopicService>();
+
+
             var app = builder.Build();
+
+            app.Lifetime.ApplicationStarted.Register(async () =>
+            {
+                // Database Initialiser 
+                await app.InitialiseDatabaseAsync();
+            });
 
             // Configure the HTTP request pipeline.
             // Configure the HTTP request pipeline.

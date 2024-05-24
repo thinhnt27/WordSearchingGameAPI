@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using WordSearchingGameAPI.DTOs;
+using WordSearchingGameAPI.Models;
 
 namespace WordSearchingGameAPI.Mapper
 {
@@ -7,6 +9,8 @@ namespace WordSearchingGameAPI.Mapper
         public ApplicationMapper() 
         {
 //            CreateMap<Materials, MaterialsModel>().ReverseMap();
+              CreateMap<User, UserDTO>().ReverseMap();
+
         }
     }
 }
