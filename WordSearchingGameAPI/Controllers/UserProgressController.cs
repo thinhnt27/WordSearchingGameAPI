@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using WordSearchingGameAPI.DTOs;
+using WordSearchingGameAPI.DTOs.Requests;
+using WordSearchingGameAPI.DTOs.Responses;
 using WordSearchingGameAPI.Service;
 
 namespace WordSearchingGameAPI.Controllers
@@ -21,6 +23,18 @@ namespace WordSearchingGameAPI.Controllers
         public async Task<ActionResult<UserProgressDTO?>> CreateUserProgressAsync(UserProgressDTO userProgressDTO)
         {
             var userProgress = await _userProgressService.CreateUserProgressAsync(userProgressDTO);
+            if(userProgress == null)
+            {
+                return BadRequest();
+            }
+            return Ok(userProgress);
+        }
+
+        //Create user progress v2
+        [HttpPost("v2")]
+        public async Task<ActionResult<UserProgressDTO?>> CreateUserProgressV2Async(UserProgressRequest userProgressRequest)
+        {
+            var userProgress = await _userProgressService.CreateUserProgressV2Async(userProgressRequest);
             if(userProgress == null)
             {
                 return BadRequest();

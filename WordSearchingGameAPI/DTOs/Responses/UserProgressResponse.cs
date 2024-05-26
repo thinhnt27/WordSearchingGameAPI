@@ -1,6 +1,6 @@
 ﻿using WordSearchingGameAPI.Models;
 
-namespace WordSearchingGameAPI.DTOs
+namespace WordSearchingGameAPI.DTOs.Responses
 {
     public class UserProgressResponse
     {

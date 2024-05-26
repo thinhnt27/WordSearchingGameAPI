@@ -41,5 +41,13 @@ namespace WordSearchingGameAPI.Repository
 
 
         }
+
+        public async Task<Level?> GetLevelByLevelNumberAndTopicNameAndDifficultyName(string topicName, string difficultyLevel, int levelNumber)
+        {
+            return await _dbSet
+                .Include(l => l.Topic)
+                .Include(l => l.Difficulty)
+                .FirstOrDefaultAsync(l => l.Topic.TopicName == topicName && l.Difficulty.DifficultyLevel == difficultyLevel && l.LevelNumber == levelNumber);
+        }
     }
 }
