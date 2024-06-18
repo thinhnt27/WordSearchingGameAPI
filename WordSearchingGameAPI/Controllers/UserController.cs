@@ -48,5 +48,15 @@ namespace WordSearchingGameAPI.Controllers
             return Ok(result);
         }
 
+        [HttpPost("login")]
+        public async Task<IActionResult> LoginUserAsync([FromBody] UserLoginDTO userLogin)
+        {
+            var result = await _userService.GetUserByUsernameAsync(userLogin);
+            if (result == null)
+            {
+                return Unauthorized();
+            }
+            return Ok(result);
+        }
     }
 }

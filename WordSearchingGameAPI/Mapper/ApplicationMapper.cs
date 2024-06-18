@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using WordSearchingGameAPI.DTOs;
+using WordSearchingGameAPI.DTOs.Responses;
 using WordSearchingGameAPI.Models;
 
 namespace WordSearchingGameAPI.Mapper
@@ -12,7 +13,7 @@ namespace WordSearchingGameAPI.Mapper
             CreateMap<User, UserDTO>().ReverseMap();
             CreateMap<Difficulty, DifficultyDTO>().ReverseMap();
             CreateMap<UserProgress, UserProgressDTO>().ReverseMap();
-
+            CreateMap<User, UserLoginResponse>().ReverseMap();
         }
     }
 }
