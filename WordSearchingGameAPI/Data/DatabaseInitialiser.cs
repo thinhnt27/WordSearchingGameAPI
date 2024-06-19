@@ -200,10 +200,46 @@ namespace WordSearchingGameAPI.Data
                    new Level { TopicId = 4, DifficultyId = 3, LevelNumber = 8 },
                    new Level { TopicId = 4, DifficultyId = 3, LevelNumber = 9 },
                    new Level { TopicId = 4, DifficultyId = 3, LevelNumber = 10 },
+
+                   new Level { TopicId = 5, DifficultyId = 1, LevelNumber = 1 },
+                   new Level { TopicId = 5, DifficultyId = 1, LevelNumber = 2 },
+                   new Level { TopicId = 5, DifficultyId = 1, LevelNumber = 3 },
+                   new Level { TopicId = 5, DifficultyId = 1, LevelNumber = 4 },
+                   new Level { TopicId = 5, DifficultyId = 1, LevelNumber = 5 },
+
+                   new Level { TopicId = 5, DifficultyId = 2, LevelNumber = 1 },
+                   new Level { TopicId = 5, DifficultyId = 2, LevelNumber = 2 },
+                   new Level { TopicId = 5, DifficultyId = 2, LevelNumber = 3 },
+                   new Level { TopicId = 5, DifficultyId = 2, LevelNumber = 4 },
+                   new Level { TopicId = 5, DifficultyId = 2, LevelNumber = 5 },
+
+                   new Level { TopicId = 5, DifficultyId = 3, LevelNumber = 1 },
+                   new Level { TopicId = 5, DifficultyId = 3, LevelNumber = 2 },
+                   new Level { TopicId = 5, DifficultyId = 3, LevelNumber = 3 },
+                   new Level { TopicId = 5, DifficultyId = 3, LevelNumber = 4 },
+                   new Level { TopicId = 5, DifficultyId = 3, LevelNumber = 5 },
+
+                   new Level { TopicId = 6, DifficultyId = 1, LevelNumber = 1 },
+                   new Level { TopicId = 6, DifficultyId = 1, LevelNumber = 2 },
+                   new Level { TopicId = 6, DifficultyId = 1, LevelNumber = 3 },
+                   new Level { TopicId = 6, DifficultyId = 1, LevelNumber = 4 },
+                   new Level { TopicId = 6, DifficultyId = 1, LevelNumber = 5 },
+
+                   new Level { TopicId = 6, DifficultyId = 2, LevelNumber = 1 },
+                   new Level { TopicId = 6, DifficultyId = 2, LevelNumber = 2 },
+                   new Level { TopicId = 6, DifficultyId = 2, LevelNumber = 3 },
+                   new Level { TopicId = 6, DifficultyId = 2, LevelNumber = 4 },
+                   new Level { TopicId = 6, DifficultyId = 2, LevelNumber = 5 },
+
+                   new Level { TopicId = 6, DifficultyId = 3, LevelNumber = 1 },
+                   new Level { TopicId = 6, DifficultyId = 3, LevelNumber = 2 },
+                   new Level { TopicId = 6, DifficultyId = 3, LevelNumber = 3 },
+                   new Level { TopicId = 6, DifficultyId = 3, LevelNumber = 4 },
+                   new Level { TopicId = 6, DifficultyId = 3, LevelNumber = 5 },
             };
             var words = new List<Word>
              {
-                 //10
+                 //Animal
                  new Word { TopicId = 1, DifficultyId = 1, Word1 = "cat"},
                  new Word { TopicId = 1, DifficultyId = 1, Word1 = "dog"},
                  new Word { TopicId = 1, DifficultyId = 1, Word1 = "fish"},
@@ -211,23 +247,23 @@ namespace WordSearchingGameAPI.Data
                  new Word { TopicId = 1, DifficultyId = 1, Word1 = "cow"},
 
                  //10
-                 new Word { TopicId = 1, DifficultyId = 2, Word1 = "giraffe"},
+                 new Word { TopicId = 1, DifficultyId = 2, Word1 = "Shark"},
                  new Word { TopicId = 1, DifficultyId = 2, Word1 = "lion"},
-                 new Word { TopicId = 1, DifficultyId = 2, Word1 = "dolphin"},
-                 new Word { TopicId = 1, DifficultyId = 2, Word1 = "shark"},
-                 new Word { TopicId = 1, DifficultyId = 2, Word1 = "jaguar"},
+                 new Word { TopicId = 1, DifficultyId = 2, Word1 = "Zebra"},
+                 new Word { TopicId = 1, DifficultyId = 2, Word1 = "Eagle"},
+                 new Word { TopicId = 1, DifficultyId = 2, Word1 = "Panda"},
                  //8
-                 new Word { TopicId = 1, DifficultyId = 3, Word1 = "narwhal"},
-                 new Word { TopicId = 1, DifficultyId = 3, Word1 = "wildebeest"},
-                 new Word { TopicId = 1, DifficultyId = 3, Word1 = "falcon"},
-                 new Word { TopicId = 1, DifficultyId = 3, Word1 = "cougar"},
-                 new Word { TopicId = 1, DifficultyId = 3, Word1 = "skunk"},
+                 new Word { TopicId = 1, DifficultyId = 3, Word1 = "Falcon"},
+                 new Word { TopicId = 1, DifficultyId = 3, Word1 = "Cougar"},
+                 new Word { TopicId = 1, DifficultyId = 3, Word1 = "Fallow"},
+                 new Word { TopicId = 1, DifficultyId = 3, Word1 = "Toucan"},
+                 new Word { TopicId = 1, DifficultyId = 3, Word1 = "Wombat"},
 
-                 //10
+                 //Food
                  new Word { TopicId = 2, DifficultyId = 1, Word1 = "cake"},
                  new Word { TopicId = 2, DifficultyId = 1, Word1 = "rice"},
                  new Word { TopicId = 2, DifficultyId = 1, Word1 = "pho"},
-                 new Word { TopicId = 2, DifficultyId = 1, Word1 = "noodles"},
+                 new Word { TopicId = 2, DifficultyId = 1, Word1 = "noodle"},
                  new Word { TopicId = 2, DifficultyId = 1, Word1 = "egg"},
 
                  //11
@@ -244,7 +280,7 @@ namespace WordSearchingGameAPI.Data
                  new Word { TopicId = 2, DifficultyId = 3, Word1 = "donut"},
                  new Word { TopicId = 2, DifficultyId = 3, Word1 = "grapes"},
 
-                 //9
+                 //Sport
                  new Word { TopicId = 3, DifficultyId = 1, Word1 = "Ball"},
                  new Word { TopicId = 3, DifficultyId = 1, Word1 = "Golf"},
                  new Word { TopicId = 3, DifficultyId = 1, Word1 = "Swim"},
@@ -252,20 +288,20 @@ namespace WordSearchingGameAPI.Data
                  new Word { TopicId = 3, DifficultyId = 1, Word1 = "Race"},
 
                  //10
-                 new Word { TopicId = 3, DifficultyId = 2, Word1 = "Soccer"},
-                 new Word { TopicId = 3, DifficultyId = 2, Word1 = "Tennis"},
-                 new Word { TopicId = 3, DifficultyId = 2, Word1 = "Hockey"},
+                 new Word { TopicId = 3, DifficultyId = 2, Word1 = "Ballet"},
+                 new Word { TopicId = 3, DifficultyId = 2, Word1 = "Judo"},
+                 new Word { TopicId = 3, DifficultyId = 2, Word1 = "Yoga"},
                  new Word { TopicId = 3, DifficultyId = 2, Word1 = "Boxing"},
                  new Word { TopicId = 3, DifficultyId = 2, Word1 = "Rugby"},
 
                  //9
-                 new Word { TopicId = 3, DifficultyId = 3, Word1 = "Sprint"},
-                 new Word { TopicId = 3, DifficultyId = 3, Word1 = "Boxing"},
-                 new Word { TopicId = 3, DifficultyId = 3, Word1 = "Judo"},
+                 new Word { TopicId = 3, DifficultyId = 3, Word1 = "Surf"},
+                 new Word { TopicId = 3, DifficultyId = 3, Word1 = "Luge"},
+                 new Word { TopicId = 3, DifficultyId = 3, Word1 = "Futs"},
                  new Word { TopicId = 3, DifficultyId = 3, Word1 = "Futsal"},
                  new Word { TopicId = 3, DifficultyId = 3, Word1 = "Wrestl"},
 
-                 //10
+                 //Hobbies
                  new Word { TopicId = 4, DifficultyId = 1, Word1 = "Read"},
                  new Word { TopicId = 4, DifficultyId = 1, Word1 = "Draw"},
                  new Word { TopicId = 4, DifficultyId = 1, Word1 = "Swim"},
@@ -274,35 +310,37 @@ namespace WordSearchingGameAPI.Data
 
                  //10
                  new Word { TopicId = 4, DifficultyId = 2, Word1 = "Gaming"},
-                 new Word { TopicId = 4, DifficultyId = 2, Word1 = "Sewing"},
-                 new Word { TopicId = 4, DifficultyId = 2, Word1 = "Craft"},
+                 new Word { TopicId = 4, DifficultyId = 2, Word1 = "Chess"},
+                 new Word { TopicId = 4, DifficultyId = 2, Word1 = "Garden"},
                  new Word { TopicId = 4, DifficultyId = 2, Word1 = "Dance"},
-                 new Word { TopicId = 4, DifficultyId = 2, Word1 = "Sketch"},
+                 new Word { TopicId = 4, DifficultyId = 2, Word1 = "Coding"},
 
                  new Word { TopicId = 4, DifficultyId = 3, Word1 = "Puzzle"},
-                 new Word { TopicId = 4, DifficultyId = 3, Word1 = "Archery"},
-                 new Word { TopicId = 4, DifficultyId = 3, Word1 = "Coding"},
+                 new Word { TopicId = 4, DifficultyId = 3, Word1 = "Golf"},
+                 new Word { TopicId = 4, DifficultyId = 3, Word1 = "Ski"},
                  new Word { TopicId = 4, DifficultyId = 3, Word1 = "Guitar"},
                  new Word { TopicId = 4, DifficultyId = 3, Word1 = "Quilts"},
 
+                 //Work
                 new Word { TopicId = 5, DifficultyId = 1, Word1 = "Email"},
                 new Word { TopicId = 5, DifficultyId = 1, Word1 = "Plan"},
                 new Word { TopicId = 5, DifficultyId = 1, Word1 = "Meet"},
                 new Word { TopicId = 5, DifficultyId = 1, Word1 = "Task"},
                 new Word { TopicId = 5, DifficultyId = 1, Word1 = "File"},
 
-                new Word { TopicId = 5, DifficultyId = 2, Word1 = "Report"},
-                new Word { TopicId = 5, DifficultyId = 2, Word1 = "Office"},
+                new Word { TopicId = 5, DifficultyId = 2, Word1 = "Work"},
+                new Word { TopicId = 5, DifficultyId = 2, Word1 = "Chef"},
                 new Word { TopicId = 5, DifficultyId = 2, Word1 = "Client"},
                 new Word { TopicId = 5, DifficultyId = 2, Word1 = "Design"},
                 new Word { TopicId = 5, DifficultyId = 2, Word1 = "Budget"},
 
-                new Word { TopicId = 5, DifficultyId = 3, Word1 = "Manage"},
-                new Word { TopicId = 5, DifficultyId = 3, Word1 = "Direct"},
+                new Word { TopicId = 5, DifficultyId = 3, Word1 = "Task"},
+                new Word { TopicId = 5, DifficultyId = 3, Word1 = "Salary"},
                 new Word { TopicId = 5, DifficultyId = 3, Word1 = "Assess"},
-                new Word { TopicId = 5, DifficultyId = 3, Word1 = "Review"},
-                new Word { TopicId = 5, DifficultyId = 3, Word1 = "Deploy"},
+                new Word { TopicId = 5, DifficultyId = 3, Word1 = "Knot"},
+                new Word { TopicId = 5, DifficultyId = 3, Word1 = "Keys"},
 
+                //Countries
                 new Word { TopicId = 6, DifficultyId = 1, Word1 = "Italy"},
                 new Word { TopicId = 6, DifficultyId = 1, Word1 = "Japan"},
                 new Word { TopicId = 6, DifficultyId = 1, Word1 = "India"},
@@ -310,16 +348,16 @@ namespace WordSearchingGameAPI.Data
                 new Word { TopicId = 6, DifficultyId = 1, Word1 = "Egypt"},
 
                 new Word { TopicId = 6, DifficultyId = 2, Word1 = "France"},
-                new Word { TopicId = 6, DifficultyId = 2, Word1 = "Canada"},
-                new Word { TopicId = 6, DifficultyId = 2, Word1 = "Brazil"},
-                new Word { TopicId = 6, DifficultyId = 2, Word1 = "Sweden"},
-                new Word { TopicId = 6, DifficultyId = 2, Word1 = "Mexico"},
+                new Word { TopicId = 6, DifficultyId = 2, Word1 = "Fiji"},
+                new Word { TopicId = 6, DifficultyId = 2, Word1 = "Greece"},
+                new Word { TopicId = 6, DifficultyId = 2, Word1 = "Panama"},
+                new Word { TopicId = 6, DifficultyId = 2, Word1 = "Guinea"},
 
-                new Word { TopicId = 6, DifficultyId = 3, Word1 = "Turkey"},
-                new Word { TopicId = 6, DifficultyId = 3, Word1 = "Norway"},
+                new Word { TopicId = 6, DifficultyId = 3, Word1 = "Haiti"},
+                new Word { TopicId = 6, DifficultyId = 3, Word1 = "Russia"},
                 new Word { TopicId = 6, DifficultyId = 3, Word1 = "Cyprus"},
-                new Word { TopicId = 6, DifficultyId = 3, Word1 = "Jordan"},
-                new Word { TopicId = 6, DifficultyId = 3, Word1 = "Poland"}
+                new Word { TopicId = 6, DifficultyId = 3, Word1 = "Serbia"},
+                new Word { TopicId = 6, DifficultyId = 3, Word1 = "Peru"}
 
 
             };
