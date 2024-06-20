@@ -28,5 +28,12 @@ namespace WordSearchingGameAPI.Repository
                 .ToListAsync();
         }
 
+        public async Task<UserProgress> GetUserProgressById(int userId)
+        {
+            return await _dbSet
+                .Where(up => up.UserId == userId)
+                .FirstOrDefaultAsync();
+        }
+
     }
 }

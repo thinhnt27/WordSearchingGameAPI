@@ -19,7 +19,6 @@ namespace WordSearchingGameAPI.DTOs.Requests
         [Required(ErrorMessage = "Please enter the completion status")]
         public bool? Completed { get; set; }
 
-        [Required(ErrorMessage = "Please enter the completion time")]
         public DateTime CompletionTime { get; set; }
     }
 }

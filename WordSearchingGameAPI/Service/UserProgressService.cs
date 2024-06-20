@@ -64,38 +64,12 @@ namespace WordSearchingGameAPI.Service
 
         public async Task<UserProgressDTO?> CreateUserProgressV2Async(UserProgressRequest userProgressRequest)
         {
-            var user = await _unitOfWorks.UserProgress.GetUserProgressByUserIdAsync(userProgressRequest.UserId);
-            if (user == null)
-            {
-                return null;
-            }
             if(userProgressRequest.TopicName == null || userProgressRequest.DifficultyLevel == null)
             {
                 return null;
             }
             var levelRequest = await _unitOfWorks.Level.GetLevelByLevelNumberAndTopicNameAndDifficultyName(userProgressRequest.TopicName, userProgressRequest.DifficultyLevel, userProgressRequest.LevelNumber);
-            
-            foreach (var up in user)
-            {
-                if (up.LevelId == levelRequest?.LevelId)
-                {
-                    return null;
-                }
-            }
-            //get level's request
-            //var levelRequest = await _unitOfWorks.Level.GetByIdAsync(userProgressRequest.LevelId);
 
-            //get user progress from db
-            var userProgressDb = await _unitOfWorks.UserProgress.GetUserProgressByUserIdAsync(userProgressRequest.UserId);
-            //get List level folow userId, difficultyId, topicId
-            var levels = await _unitOfWorks.Level.GetLevelByUserIdAndDifficultyIdAndTopicIdAsync(userProgressRequest.UserId, levelRequest.TopicId, levelRequest.DifficultyId);
-
-            
-            var expectedLevelNumber = levels.Count() > 0 ? levels.Max(l => l.LevelNumber) + 1 : 1;
-            if(levelRequest.LevelNumber != expectedLevelNumber)
-            {
-                return null;
-            }
             var userProgress = new UserProgress
             {
                 UserId = userProgressRequest.UserId,
@@ -103,6 +77,37 @@ namespace WordSearchingGameAPI.Service
                 Completed = userProgressRequest.Completed,
                 CompletionTime = userProgressRequest.CompletionTime
             };
+            //foreach (var up in user)
+            //{
+            //    if (up.LevelId == levelRequest?.LevelId)
+            //    {
+            //        return null;
+            //    }
+            //}
+            //get level's request
+            //var levelRequest = await _unitOfWorks.Level.GetByIdAsync(userProgressRequest.LevelId);
+
+            //get user progress from db
+            var existedUserProgress = await _unitOfWorks.UserProgress.GetUserProgressById(userProgressRequest.UserId);
+            if (existedUserProgress != null)
+            {
+                existedUserProgress.Completed = userProgressRequest.Completed;
+                existedUserProgress.CompletionTime = userProgressRequest.CompletionTime;
+                existedUserProgress.LevelId = levelRequest.LevelId;
+
+                await _unitOfWorks.UserProgress.UpdateAsync(existedUserProgress);
+                _unitOfWorks.Complete();
+                return _mapper.Map<UserProgressDTO>(existedUserProgress);
+            }
+            //get List level folow userId, difficultyId, topicId
+            //var levels = await _unitOfWorks.Level.GetLevelByUserIdAndDifficultyIdAndTopicIdAsync(userProgressRequest.UserId, levelRequest.TopicId, levelRequest.DifficultyId);
+
+            
+            //var expectedLevelNumber = levels.Count() > 0 ? levels.Max(l => l.LevelNumber) + 1 : 1;
+            //if(levelRequest.LevelNumber != expectedLevelNumber)
+            //{
+            //    return null;
+            //}
             await _unitOfWorks.UserProgress.AddAsync(userProgress);
             _unitOfWorks.Complete();
             return _mapper.Map<UserProgressDTO>(userProgress);
