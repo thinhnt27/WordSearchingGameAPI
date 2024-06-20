@@ -62,8 +62,10 @@ namespace WordSearchingGameAPI.Data
             {
                 new Topic { TopicName = "Animals" },
                 new Topic { TopicName = "Food" },
-                new Topic { TopicName = "Places" },
-                new Topic { TopicName = "Nature" }
+                new Topic { TopicName = "Sport" },
+                new Topic { TopicName = "Hobbies" },
+                new Topic { TopicName = "Work" },
+                new Topic { TopicName = "Countries" }
             };
 
             var users = new List<User>
@@ -198,141 +200,165 @@ namespace WordSearchingGameAPI.Data
                    new Level { TopicId = 4, DifficultyId = 3, LevelNumber = 8 },
                    new Level { TopicId = 4, DifficultyId = 3, LevelNumber = 9 },
                    new Level { TopicId = 4, DifficultyId = 3, LevelNumber = 10 },
+
+                   new Level { TopicId = 5, DifficultyId = 1, LevelNumber = 1 },
+                   new Level { TopicId = 5, DifficultyId = 1, LevelNumber = 2 },
+                   new Level { TopicId = 5, DifficultyId = 1, LevelNumber = 3 },
+                   new Level { TopicId = 5, DifficultyId = 1, LevelNumber = 4 },
+                   new Level { TopicId = 5, DifficultyId = 1, LevelNumber = 5 },
+
+                   new Level { TopicId = 5, DifficultyId = 2, LevelNumber = 1 },
+                   new Level { TopicId = 5, DifficultyId = 2, LevelNumber = 2 },
+                   new Level { TopicId = 5, DifficultyId = 2, LevelNumber = 3 },
+                   new Level { TopicId = 5, DifficultyId = 2, LevelNumber = 4 },
+                   new Level { TopicId = 5, DifficultyId = 2, LevelNumber = 5 },
+
+                   new Level { TopicId = 5, DifficultyId = 3, LevelNumber = 1 },
+                   new Level { TopicId = 5, DifficultyId = 3, LevelNumber = 2 },
+                   new Level { TopicId = 5, DifficultyId = 3, LevelNumber = 3 },
+                   new Level { TopicId = 5, DifficultyId = 3, LevelNumber = 4 },
+                   new Level { TopicId = 5, DifficultyId = 3, LevelNumber = 5 },
+
+                   new Level { TopicId = 6, DifficultyId = 1, LevelNumber = 1 },
+                   new Level { TopicId = 6, DifficultyId = 1, LevelNumber = 2 },
+                   new Level { TopicId = 6, DifficultyId = 1, LevelNumber = 3 },
+                   new Level { TopicId = 6, DifficultyId = 1, LevelNumber = 4 },
+                   new Level { TopicId = 6, DifficultyId = 1, LevelNumber = 5 },
+
+                   new Level { TopicId = 6, DifficultyId = 2, LevelNumber = 1 },
+                   new Level { TopicId = 6, DifficultyId = 2, LevelNumber = 2 },
+                   new Level { TopicId = 6, DifficultyId = 2, LevelNumber = 3 },
+                   new Level { TopicId = 6, DifficultyId = 2, LevelNumber = 4 },
+                   new Level { TopicId = 6, DifficultyId = 2, LevelNumber = 5 },
+
+                   new Level { TopicId = 6, DifficultyId = 3, LevelNumber = 1 },
+                   new Level { TopicId = 6, DifficultyId = 3, LevelNumber = 2 },
+                   new Level { TopicId = 6, DifficultyId = 3, LevelNumber = 3 },
+                   new Level { TopicId = 6, DifficultyId = 3, LevelNumber = 4 },
+                   new Level { TopicId = 6, DifficultyId = 3, LevelNumber = 5 },
             };
             var words = new List<Word>
              {
-                 //10
+                 //Animal
                  new Word { TopicId = 1, DifficultyId = 1, Word1 = "cat"},
                  new Word { TopicId = 1, DifficultyId = 1, Word1 = "dog"},
                  new Word { TopicId = 1, DifficultyId = 1, Word1 = "fish"},
                  new Word { TopicId = 1, DifficultyId = 1, Word1 = "bird"},
                  new Word { TopicId = 1, DifficultyId = 1, Word1 = "cow"},
-                 new Word { TopicId = 1, DifficultyId = 1, Word1 = "chicken"},
-                 new Word { TopicId = 1, DifficultyId = 1, Word1 = "horse"},
-                 new Word { TopicId = 1, DifficultyId = 1, Word1 = "pig"},
-                 new Word { TopicId = 1, DifficultyId = 1, Word1 = "elephant"},
-                 new Word { TopicId = 1, DifficultyId = 1, Word1 = "mouse"},
 
                  //10
-                 new Word { TopicId = 1, DifficultyId = 2, Word1 = "giraffe"},
+                 new Word { TopicId = 1, DifficultyId = 2, Word1 = "Shark"},
                  new Word { TopicId = 1, DifficultyId = 2, Word1 = "lion"},
-                 new Word { TopicId = 1, DifficultyId = 2, Word1 = "dolphin"},
-                 new Word { TopicId = 1, DifficultyId = 2, Word1 = "shark"},
-                 new Word { TopicId = 1, DifficultyId = 2, Word1 = "jaguar"},
-                 new Word { TopicId = 1, DifficultyId = 2, Word1 = "owl"},
-                 new Word { TopicId = 1, DifficultyId = 2, Word1 = "goose"},
-                 new Word { TopicId = 1, DifficultyId = 2, Word1 = "gecko"},
-                 new Word { TopicId = 1, DifficultyId = 2, Word1 = "squirrel"},
-                 new Word { TopicId = 1, DifficultyId = 2, Word1 = "otter"},
+                 new Word { TopicId = 1, DifficultyId = 2, Word1 = "Zebra"},
+                 new Word { TopicId = 1, DifficultyId = 2, Word1 = "Eagle"},
+                 new Word { TopicId = 1, DifficultyId = 2, Word1 = "Panda"},
                  //8
-                 new Word { TopicId = 1, DifficultyId = 3, Word1 = "narwhal"},
-                 new Word { TopicId = 1, DifficultyId = 3, Word1 = "wildebeest"},
-                 new Word { TopicId = 1, DifficultyId = 3, Word1 = "falcon"},
-                 new Word { TopicId = 1, DifficultyId = 3, Word1 = "cougar"},
-                 new Word { TopicId = 1, DifficultyId = 3, Word1 = "skunk"},
-                 new Word { TopicId = 1, DifficultyId = 3, Word1 = "mongoose"},
-                 new Word { TopicId = 1, DifficultyId = 3, Word1 = "rhinoceros"},
-                 new Word { TopicId = 1, DifficultyId = 3, Word1 = "pelican"},
+                 new Word { TopicId = 1, DifficultyId = 3, Word1 = "Falcon"},
+                 new Word { TopicId = 1, DifficultyId = 3, Word1 = "Cougar"},
+                 new Word { TopicId = 1, DifficultyId = 3, Word1 = "Fallow"},
+                 new Word { TopicId = 1, DifficultyId = 3, Word1 = "Toucan"},
+                 new Word { TopicId = 1, DifficultyId = 3, Word1 = "Wombat"},
 
-                 //10
+                 //Food
                  new Word { TopicId = 2, DifficultyId = 1, Word1 = "cake"},
                  new Word { TopicId = 2, DifficultyId = 1, Word1 = "rice"},
                  new Word { TopicId = 2, DifficultyId = 1, Word1 = "pho"},
-                 new Word { TopicId = 2, DifficultyId = 1, Word1 = "noodles"},
+                 new Word { TopicId = 2, DifficultyId = 1, Word1 = "noodle"},
                  new Word { TopicId = 2, DifficultyId = 1, Word1 = "egg"},
-                 new Word { TopicId = 2, DifficultyId = 1, Word1 = "milk"},
-                 new Word { TopicId = 2, DifficultyId = 1, Word1 = "pasta"},
-                 new Word { TopicId = 2, DifficultyId = 1, Word1 = "fish"},
-                 new Word { TopicId = 2, DifficultyId = 1, Word1 = "meat"},
-                 new Word { TopicId = 2, DifficultyId = 1, Word1 = "vegetables"},
+
                  //11
                  new Word { TopicId = 2, DifficultyId = 2, Word1 = "pizza"},
-                 new Word { TopicId = 2, DifficultyId = 2, Word1 = "hamburger"},
+                 new Word { TopicId = 2, DifficultyId = 2, Word1 = "burger"},
                  new Word { TopicId = 2, DifficultyId = 2, Word1 = "sushi"},
                  new Word { TopicId = 2, DifficultyId = 2, Word1 = "salad"},
-                 new Word { TopicId = 2, DifficultyId = 2, Word1 = "fried"},
-                 new Word { TopicId = 2, DifficultyId = 2, Word1 = "chicken"},
-                 new Word { TopicId = 2, DifficultyId = 2, Word1 = "spaghetti"},
-                 new Word { TopicId = 2, DifficultyId = 2, Word1 = "bread"},
-                 new Word { TopicId = 2, DifficultyId = 2, Word1 = "yogurt"},
-                 new Word { TopicId = 2, DifficultyId = 2, Word1 = "fruit"},
-                 new Word { TopicId = 2, DifficultyId = 2, Word1 = "seafood"},
+                 new Word { TopicId = 2, DifficultyId = 2, Word1 = "pasta"},
+
                  //7
-                 new Word { TopicId = 2, DifficultyId = 3, Word1 = "tiramisu"},
-                 new Word { TopicId = 2, DifficultyId = 3, Word1 = "lasagna"},
-                 new Word { TopicId = 2, DifficultyId = 3, Word1 = "sashimi"},
-                 new Word { TopicId = 2, DifficultyId = 3, Word1 = "ratatouille"},
-                 new Word { TopicId = 2, DifficultyId = 3, Word1 = "macarons"},
-                 new Word { TopicId = 2, DifficultyId = 3, Word1 = "steak"},
-                 new Word { TopicId = 2, DifficultyId = 3, Word1 = "lobster"},
+                 new Word { TopicId = 2, DifficultyId = 3, Word1 = "sorbet"},
+                 new Word { TopicId = 2, DifficultyId = 3, Word1 = "toast"},
+                 new Word { TopicId = 2, DifficultyId = 3, Word1 = "gyro"},
+                 new Word { TopicId = 2, DifficultyId = 3, Word1 = "donut"},
+                 new Word { TopicId = 2, DifficultyId = 3, Word1 = "grapes"},
+
+                 //Sport
+                 new Word { TopicId = 3, DifficultyId = 1, Word1 = "Ball"},
+                 new Word { TopicId = 3, DifficultyId = 1, Word1 = "Golf"},
+                 new Word { TopicId = 3, DifficultyId = 1, Word1 = "Swim"},
+                 new Word { TopicId = 3, DifficultyId = 1, Word1 = "Dart"},
+                 new Word { TopicId = 3, DifficultyId = 1, Word1 = "Race"},
+
+                 //10
+                 new Word { TopicId = 3, DifficultyId = 2, Word1 = "Ballet"},
+                 new Word { TopicId = 3, DifficultyId = 2, Word1 = "Judo"},
+                 new Word { TopicId = 3, DifficultyId = 2, Word1 = "Yoga"},
+                 new Word { TopicId = 3, DifficultyId = 2, Word1 = "Boxing"},
+                 new Word { TopicId = 3, DifficultyId = 2, Word1 = "Rugby"},
 
                  //9
-                 new Word { TopicId = 3, DifficultyId = 1, Word1 = "Hanoi"},
-                 new Word { TopicId = 3, DifficultyId = 1, Word1 = "Saigon"},
-                 new Word { TopicId = 3, DifficultyId = 1, Word1 = "Tokyo"},
-                 new Word { TopicId = 3, DifficultyId = 1, Word1 = "Paris"},
-                 new Word { TopicId = 3, DifficultyId = 1, Word1 = "London"},
-                 new Word { TopicId = 3, DifficultyId = 1, Word1 = "Rome"},
-                 new Word { TopicId = 3, DifficultyId = 1, Word1 = "Seoul"},
-                 new Word { TopicId = 3, DifficultyId = 1, Word1 = "Beijing"},
-                 new Word { TopicId = 3, DifficultyId = 1, Word1 = "Bangkok"},
+                 new Word { TopicId = 3, DifficultyId = 3, Word1 = "Surf"},
+                 new Word { TopicId = 3, DifficultyId = 3, Word1 = "Luge"},
+                 new Word { TopicId = 3, DifficultyId = 3, Word1 = "Futs"},
+                 new Word { TopicId = 3, DifficultyId = 3, Word1 = "Futsal"},
+                 new Word { TopicId = 3, DifficultyId = 3, Word1 = "Wrestl"},
+
+                 //Hobbies
+                 new Word { TopicId = 4, DifficultyId = 1, Word1 = "Read"},
+                 new Word { TopicId = 4, DifficultyId = 1, Word1 = "Draw"},
+                 new Word { TopicId = 4, DifficultyId = 1, Word1 = "Swim"},
+                 new Word { TopicId = 4, DifficultyId = 1, Word1 = "Cook"},
+                 new Word { TopicId = 4, DifficultyId = 1, Word1 = "Hike"},
 
                  //10
-                 new Word { TopicId = 3, DifficultyId = 2, Word1 = "Sydney"},
-                 new Word { TopicId = 3, DifficultyId = 2, Word1 = "Moscow"},
-                 new Word { TopicId = 3, DifficultyId = 2, Word1 = "Dubai"},
-                 new Word { TopicId = 3, DifficultyId = 2, Word1 = "Istanbul"},
-                 new Word { TopicId = 3, DifficultyId = 2, Word1 = "Rio"},
-                 new Word { TopicId = 3, DifficultyId = 2, Word1 = "Cairo"},
-                 new Word { TopicId = 3, DifficultyId = 2, Word1 = "Toronto"},
-                 new Word { TopicId = 3, DifficultyId = 2, Word1 = "Madrid"},
-                 new Word { TopicId = 3, DifficultyId = 2, Word1 = "Amsterdam"},
-                 new Word { TopicId = 3, DifficultyId = 2, Word1 = "Venice"},
+                 new Word { TopicId = 4, DifficultyId = 2, Word1 = "Gaming"},
+                 new Word { TopicId = 4, DifficultyId = 2, Word1 = "Chess"},
+                 new Word { TopicId = 4, DifficultyId = 2, Word1 = "Garden"},
+                 new Word { TopicId = 4, DifficultyId = 2, Word1 = "Dance"},
+                 new Word { TopicId = 4, DifficultyId = 2, Word1 = "Coding"},
 
-                 //9
-                 new Word { TopicId = 3, DifficultyId = 3, Word1 = "Reykjavik"},
-                 new Word { TopicId = 3, DifficultyId = 3, Word1 = "Johannesburg"},
-                 new Word { TopicId = 3, DifficultyId = 3, Word1 = "Montevideo"},
-                 new Word { TopicId = 3, DifficultyId = 3, Word1 = "Casablanca"},
-                 new Word { TopicId = 3, DifficultyId = 3, Word1 = "Ulaanbaatar"},
-                 new Word { TopicId = 3, DifficultyId = 3, Word1 = "Ljubljana"},
-                 new Word { TopicId = 3, DifficultyId = 3, Word1 = "Bratislava"},
-                 new Word { TopicId = 3, DifficultyId = 3, Word1 = "Vilnius"},
-                 new Word { TopicId = 3, DifficultyId = 3, Word1 = "Yangon"},
+                 new Word { TopicId = 4, DifficultyId = 3, Word1 = "Puzzle"},
+                 new Word { TopicId = 4, DifficultyId = 3, Word1 = "Golf"},
+                 new Word { TopicId = 4, DifficultyId = 3, Word1 = "Ski"},
+                 new Word { TopicId = 4, DifficultyId = 3, Word1 = "Guitar"},
+                 new Word { TopicId = 4, DifficultyId = 3, Word1 = "Quilts"},
 
-                 //10
-                 new Word { TopicId = 4, DifficultyId = 1, Word1 = "mountain"},
-                 new Word { TopicId = 4, DifficultyId = 1, Word1 = "river"},
-                 new Word { TopicId = 4, DifficultyId = 1, Word1 = "sea"},
-                 new Word { TopicId = 4, DifficultyId = 1, Word1 = "forest"},
-                 new Word { TopicId = 4, DifficultyId = 1, Word1 = "lake"},
-                 new Word { TopicId = 4, DifficultyId = 1, Word1 = "desert"},
-                 new Word { TopicId = 4, DifficultyId = 1, Word1 = "rain"},
-                 new Word { TopicId = 4, DifficultyId = 1, Word1 = "snow"},
-                 new Word { TopicId = 4, DifficultyId = 1, Word1 = "tree"},
-                 new Word { TopicId = 4, DifficultyId = 1, Word1 = "grass"},
+                 //Work
+                new Word { TopicId = 5, DifficultyId = 1, Word1 = "Email"},
+                new Word { TopicId = 5, DifficultyId = 1, Word1 = "Plan"},
+                new Word { TopicId = 5, DifficultyId = 1, Word1 = "Meet"},
+                new Word { TopicId = 5, DifficultyId = 1, Word1 = "Task"},
+                new Word { TopicId = 5, DifficultyId = 1, Word1 = "File"},
 
-                 //10
-                 new Word { TopicId = 4, DifficultyId = 2, Word1 = "swamp"},
-                 new Word { TopicId = 4, DifficultyId = 2, Word1 = "waterfall"},
-                 new Word { TopicId = 4, DifficultyId = 2, Word1 = "beach"},
-                 new Word { TopicId = 4, DifficultyId = 2, Word1 = "bay"},
-                 new Word { TopicId = 4, DifficultyId = 2, Word1 = "plain"},
-                 new Word { TopicId = 4, DifficultyId = 2, Word1 = "peninsula"},
-                 new Word { TopicId = 4, DifficultyId = 2, Word1 = "rainforest"},
-                 new Word { TopicId = 4, DifficultyId = 2, Word1 = "volcano"},
-                 new Word { TopicId = 4, DifficultyId = 2, Word1 = "ocean"},
-                 new Word { TopicId = 4, DifficultyId = 2, Word1 = "hill"},
+                new Word { TopicId = 5, DifficultyId = 2, Word1 = "Work"},
+                new Word { TopicId = 5, DifficultyId = 2, Word1 = "Chef"},
+                new Word { TopicId = 5, DifficultyId = 2, Word1 = "Client"},
+                new Word { TopicId = 5, DifficultyId = 2, Word1 = "Design"},
+                new Word { TopicId = 5, DifficultyId = 2, Word1 = "Budget"},
 
-                 new Word { TopicId = 4, DifficultyId = 3, Word1 = "biodiversity"},
-                 new Word { TopicId = 4, DifficultyId = 3, Word1 = "photosynthesis"},
-                 new Word { TopicId = 4, DifficultyId = 3, Word1 = "ecosystem"},
-                 new Word { TopicId = 4, DifficultyId = 3, Word1 = "symbiosis"},
-                 new Word { TopicId = 4, DifficultyId = 3, Word1 = "conservation"},
-                 new Word { TopicId = 4, DifficultyId = 3, Word1 = "deforestation"},
-                 new Word { TopicId = 4, DifficultyId = 3, Word1 = "habitat"},
-                 new Word { TopicId = 4, DifficultyId = 3, Word1 = "sustainability"},
-                 new Word { TopicId = 4, DifficultyId = 3, Word1 = "bioluminescence"},
+                new Word { TopicId = 5, DifficultyId = 3, Word1 = "Task"},
+                new Word { TopicId = 5, DifficultyId = 3, Word1 = "Salary"},
+                new Word { TopicId = 5, DifficultyId = 3, Word1 = "Assess"},
+                new Word { TopicId = 5, DifficultyId = 3, Word1 = "Knot"},
+                new Word { TopicId = 5, DifficultyId = 3, Word1 = "Keys"},
+
+                //Countries
+                new Word { TopicId = 6, DifficultyId = 1, Word1 = "Italy"},
+                new Word { TopicId = 6, DifficultyId = 1, Word1 = "Japan"},
+                new Word { TopicId = 6, DifficultyId = 1, Word1 = "India"},
+                new Word { TopicId = 6, DifficultyId = 1, Word1 = "Chile"},
+                new Word { TopicId = 6, DifficultyId = 1, Word1 = "Egypt"},
+
+                new Word { TopicId = 6, DifficultyId = 2, Word1 = "France"},
+                new Word { TopicId = 6, DifficultyId = 2, Word1 = "Fiji"},
+                new Word { TopicId = 6, DifficultyId = 2, Word1 = "Greece"},
+                new Word { TopicId = 6, DifficultyId = 2, Word1 = "Panama"},
+                new Word { TopicId = 6, DifficultyId = 2, Word1 = "Guinea"},
+
+                new Word { TopicId = 6, DifficultyId = 3, Word1 = "Haiti"},
+                new Word { TopicId = 6, DifficultyId = 3, Word1 = "Russia"},
+                new Word { TopicId = 6, DifficultyId = 3, Word1 = "Cyprus"},
+                new Word { TopicId = 6, DifficultyId = 3, Word1 = "Serbia"},
+                new Word { TopicId = 6, DifficultyId = 3, Word1 = "Peru"}
+
 
             };
 
